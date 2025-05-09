@@ -1,8 +1,9 @@
-// styles/globals.css
+
 /* Add this to your styles/globals.css file */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   html {
