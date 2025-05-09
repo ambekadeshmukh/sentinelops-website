@@ -265,15 +265,34 @@ const Homepage = () => {
         </div>
       </section>
 
- SDK to your Python application with just a few lines of code.
+      {/* How It Works Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#FDFDFD]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-black mb-4">How SentinelOps Works</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              SentinelOps provides end-to-end visibility with a lightweight SDK and powerful backend.
+            </p>
+          </div>
+          
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-0.5 bg-gray-300"></div>
+            
+            {/* Step 1 */}
+            <div className="relative md:flex items-center mb-12">
+              <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                <h3 className="text-xl font-semibold text-black mb-2">1. Instrument Your Application</h3>
+                <p className="text-gray-700">
+                  Add our lightweight SDK to your Python application with just a few lines of code.
                   Works with OpenAI, Anthropic, Hugging Face, and more.
                 </p>
               </div>
-              <div className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold z-10">
+              <div className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 bg-black rounded-full w-10 h-10 flex items-center justify-center text-white font-bold z-10">
                 1
               </div>
               <div className="md:w-1/2 md:pl-12">
-                <div className="bg-gray-50 p-4 rounded-lg shadow">
+                <div className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
                   <pre className="text-sm text-gray-800 overflow-x-auto">
                     {`# Install the SDK
 pip install sentinelops
@@ -298,20 +317,20 @@ response = monitor.chat_completion(
             {/* Step 2 */}
             <div className="relative md:flex items-center mb-12">
               <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
-                <div className="bg-gray-50 p-4 rounded-lg shadow">
+                <div className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
                   <img 
-                    src="/images/stream-processor.png" 
+                    src="/images/data-processor-doodle.png" 
                     alt="Data Processing" 
                     className="rounded mx-auto"
                   />
                 </div>
               </div>
-              <div className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold z-10">
+              <div className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 bg-black rounded-full w-10 h-10 flex items-center justify-center text-white font-bold z-10">
                 2
               </div>
               <div className="md:w-1/2 md:pl-12">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">2. Real-time Data Processing</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold text-black mb-2">2. Real-time Data Processing</h3>
+                <p className="text-gray-700">
                   Your metrics, logs, and traces are processed in real-time by our advanced stream processor.
                   We automatically detect anomalies, hallucinations, and optimization opportunities.
                 </p>
@@ -321,19 +340,19 @@ response = monitor.chat_completion(
             {/* Step 3 */}
             <div className="relative md:flex items-center">
               <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">3. Visualize and Alert</h3>
-                <p className="text-gray-600">
-                  Access beautiful dashboards, set up alerts, and gain actionable insights for your AI systems.
-                  Track performance, cost, and quality metrics all in one place.
+                <h3 className="text-xl font-semibold text-black mb-2">3. Visualize and Alert</h3>
+                <p className="text-gray-700">
+                  Access minimalist dashboards, set up alerts, and gain actionable insights for your AI systems.
+                  Track performance, reliability, and quality metrics all in one place.
                 </p>
               </div>
-              <div className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold z-10">
+              <div className="md:absolute md:left-1/2 md:transform md:-translate-x-1/2 bg-black rounded-full w-10 h-10 flex items-center justify-center text-white font-bold z-10">
                 3
               </div>
               <div className="md:w-1/2 md:pl-12">
-                <div className="bg-gray-50 p-4 rounded-lg shadow">
+                <div className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
                   <img 
-                    src="/images/dashboard-preview.png" 
+                    src="/images/dashboard-doodle.png" 
                     alt="SentinelOps Dashboard" 
                     className="rounded"
                   />

@@ -1,7 +1,6 @@
-// components/Header.js
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Github } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,14 +22,14 @@ const Header = () => {
               </Link>
             </div>
             <nav className="hidden md:ml-6 md:flex md:space-x-8">
-              {/* Product Dropdown */}
+              {/* Features Dropdown */}
               <div className="relative">
                 <button 
-                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-blue-600"
+                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-black"
                   onMouseEnter={() => setProductDropdownOpen(true)}
                   onMouseLeave={() => setProductDropdownOpen(false)}
                 >
-                  Product
+                  Features
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
                 {productDropdownOpen && (
@@ -41,16 +40,16 @@ const Header = () => {
                   >
                     <div className="py-1">
                       <Link href="/features" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Features
+                        All Features
                       </Link>
-                      <Link href="/integrations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      <Link href="/features/performance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Performance Monitoring
+                      </Link>
+                      <Link href="/features/quality" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Quality Assurance
+                      </Link>
+                      <Link href="/features/integrations" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Integrations
-                      </Link>
-                      <Link href="/pricing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Pricing
-                      </Link>
-                      <Link href="/security" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Security
                       </Link>
                     </div>
                   </div>
@@ -60,7 +59,7 @@ const Header = () => {
               {/* Documentation Dropdown */}
               <div className="relative">
                 <button 
-                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-blue-600"
+                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-black"
                   onMouseEnter={() => setDocsDropdownOpen(true)}
                   onMouseLeave={() => setDocsDropdownOpen(false)}
                 >
@@ -94,19 +93,19 @@ const Header = () => {
                 )}
               </div>
 
-              <Link href="/blog" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-blue-600">
+              <Link href="/blog" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-black">
                 Blog
               </Link>
               
-              <Link href="/pricing" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-blue-600">
-                Pricing
+              <Link href="https://github.com/sentinelops/sentinelops" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-black">
+                GitHub
               </Link>
             </nav>
           </div>
           <div className="hidden md:flex items-center">
             <Link
               href="/docs/quick-start"
-              className="ml-8 inline-flex items-center justify-center white-space-nowrap rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700"
+              className="ml-8 inline-flex items-center justify-center white-space-nowrap rounded-md bg-black px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-gray-800"
             >
               Get Started
             </Link>
@@ -134,22 +133,22 @@ const Header = () => {
           <div className="pt-2 pb-3 space-y-1">
             <div className="mobile-dropdown">
               <button className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-700 hover:bg-gray-50 hover:border-gray-300 w-full text-left flex justify-between items-center" onClick={() => setProductDropdownOpen(!productDropdownOpen)}>
-                Product
+                Features
                 <ChevronDown className="h-4 w-4" />
               </button>
               {productDropdownOpen && (
                 <div className="pl-6">
                   <Link href="/features" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300">
-                    Features
+                    All Features
                   </Link>
-                  <Link href="/integrations" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300">
+                  <Link href="/features/performance" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300">
+                    Performance Monitoring
+                  </Link>
+                  <Link href="/features/quality" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300">
+                    Quality Assurance
+                  </Link>
+                  <Link href="/features/integrations" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300">
                     Integrations
-                  </Link>
-                  <Link href="/pricing" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300">
-                    Pricing
-                  </Link>
-                  <Link href="/security" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300">
-                    Security
                   </Link>
                 </div>
               )}
@@ -182,11 +181,11 @@ const Header = () => {
               Blog
             </Link>
             
-            <Link href="/pricing" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300">
-              Pricing
+            <Link href="https://github.com/sentinelops/sentinelops" className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300">
+              GitHub
             </Link>
             
-            <Link href="/docs/quick-start" className="block pl-3 pr-4 py-2 border-l-4 border-blue-500 text-base font-medium text-blue-700 bg-blue-50">
+            <Link href="/docs/quick-start" className="block pl-3 pr-4 py-2 border-l-4 border-black text-base font-medium text-black bg-gray-50">
               Get Started
             </Link>
           </div>
