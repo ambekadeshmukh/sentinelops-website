@@ -1,264 +1,358 @@
 import React from 'react';
 import Layout from './Layout';
-import { ArrowRight, BarChart2, Shield, Zap, Code, Activity, Eye, Terminal, PieChart } from 'lucide-react';
+import { ArrowRight, BarChart2, Shield, Zap, Code, Activity, Eye, Terminal, PieChart, CheckCircle, ExternalLink, Github, Star, Play } from 'lucide-react';
 
 const Homepage = () => {
   return (
     <Layout>
       <div className="flex flex-col min-h-screen">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-pink-50 to-blue-50 border-b border-pink-100 py-20 px-4 sm:px-6 lg:px-8 text-slate-800">
+        <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="md:flex md:items-center md:justify-between">
-              <div className="md:w-1/2 mb-10 md:mb-0">
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-slate-800">
-                  Full Observability for AI/LLM Systems
+            <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+              <div className="mb-10 lg:mb-0">
+                <div className="flex items-center space-x-2 mb-6">
+                  <span className="bg-pink-100 text-pink-800 text-sm font-medium px-3 py-1 rounded-full">
+                    🔥 100% Open Source
+                  </span>
+                  <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                    MIT License
+                  </span>
+                </div>
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                  Complete <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">Observability</span> for AI Systems
                 </h1>
-                <p className="text-xl md:text-2xl mb-8 text-slate-600">
-                  AI systems are black boxes. SentinelOps gives you full visibility.
+                
+                <p className="text-xl md:text-2xl text-gray-600 mb-8">
+                  Monitor, analyze, and optimize your LLM applications with real-time insights, cost tracking, and quality assurance.
                 </p>
-                <div className="space-y-3 mb-8">
+                
+                <div className="space-y-4 mb-8">
                   <div className="flex items-center">
-                    <div className="rounded-full bg-pink-100 p-2 mr-3">
-                      <Eye className="w-5 h-5 text-pink-600" />
+                    <div className="rounded-full bg-green-100 p-2 mr-3">
+                      <CheckCircle className="w-5 h-5 text-green-600" />
                     </div>
-                    <p className="text-slate-700">Monitor performance, reliability, and quality in real-time</p>
+                    <p className="text-gray-700 font-medium">Track performance across all major LLM providers</p>
                   </div>
                   <div className="flex items-center">
                     <div className="rounded-full bg-blue-100 p-2 mr-3">
-                      <BarChart2 className="w-5 h-5 text-blue-600" />
+                      <CheckCircle className="w-5 h-5 text-blue-600" />
                     </div>
-                    <p className="text-slate-700">Detect anomalies and hallucinations automatically</p>
+                    <p className="text-gray-700 font-medium">Detect hallucinations and quality issues automatically</p>
                   </div>
                   <div className="flex items-center">
-                    <div className="rounded-full bg-teal-100 p-2 mr-3">
-                      <PieChart className="w-5 h-5 text-teal-600" />
+                    <div className="rounded-full bg-purple-100 p-2 mr-3">
+                      <CheckCircle className="w-5 h-5 text-purple-600" />
                     </div>
-                    <p className="text-slate-700">Get actionable insights with data-driven analytics</p>
+                    <p className="text-gray-700 font-medium">Optimize costs with actionable recommendations</p>
                   </div>
                 </div>
+                
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                  <a href="/docs/quick-start" className="bg-gradient-to-r from-pink-500 to-pink-600 text-white hover:from-pink-600 hover:to-pink-700 font-medium rounded-lg px-6 py-3 text-center flex items-center justify-center transition-all duration-200 shadow-md hover:shadow-lg">
-                    Get Started
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                  <a 
+                    href="/docs/quick-start" 
+                    className="inline-flex items-center justify-center bg-gradient-to-r from-pink-500 to-pink-600 text-white hover:from-pink-600 hover:to-pink-700 font-medium rounded-lg px-8 py-3 text-center transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  >
+                    <Play className="mr-2 w-5 h-5" />
+                    Get Started Free
                   </a>
-                  <a href="https://github.com/sentinelops/sentinelops" className="bg-white border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 font-medium rounded-lg px-6 py-3 text-center transition-all duration-200">
-                    View on GitHub
+                  <a 
+                    href="https://github.com/sentinelops/sentinelops" 
+                    className="inline-flex items-center justify-center bg-white border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 font-medium rounded-lg px-8 py-3 text-center transition-all duration-200"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="mr-2 w-5 h-5" />
+                    Star on GitHub
                   </a>
+                </div>
+                
+                <div className="flex items-center space-x-6 mt-8 text-sm text-gray-500">
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 mr-1 text-yellow-500" />
+                    <span>2.3k+ stars</span>
+                  </div>
+                  <div>No credit card required</div>
+                  <div>Deploy in minutes</div>
                 </div>
               </div>
-              <div className="md:w-1/2 relative">
-                <div className="bg-white/80 backdrop-blur-sm border border-slate-200 p-6 rounded-xl shadow-lg">
-                  <div className="flex justify-center mb-4">
-                    <img 
-                      src="/images/SentinelOps-logo.png" 
-                      alt="SentinelOps" 
-                      className="h-16"
-                    />
+              
+              {/* Hero Visual */}
+              <div className="relative">
+                <div className="bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden">
+                  {/* Dashboard Mock */}
+                  <div className="bg-gray-900 px-4 py-3 flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span className="text-gray-400 text-sm ml-4">SentinelOps Dashboard</span>
                   </div>
-                  <img 
-                    src="/images/dashboard-doodle.png" 
-                    alt="SentinelOps Dashboard" 
-                    className="rounded-lg"
-                  />
+                  <div className="p-6">
+                    {/* Logo in center */}
+                    <div className="flex justify-center mb-6">
+                      <div className="w-20 h-20 bg-gray-50 rounded-2xl border-2 border-gray-200 flex items-center justify-center">
+                        <svg 
+                          viewBox="0 0 100 100" 
+                          className="w-16 h-16"
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2"
+                        >
+                          {/* Robot Body */}
+                          <rect x="20" y="40" width="60" height="40" rx="4" className="stroke-gray-700" />
+                          {/* Robot Head */}
+                          <rect x="25" y="20" width="50" height="25" rx="4" className="stroke-gray-700" />
+                          {/* Eyes */}
+                          <circle cx="35" cy="30" r="3" className="fill-gray-700" />
+                          <circle cx="65" cy="30" r="3" className="fill-gray-700" />
+                          {/* Mouth */}
+                          <rect x="45" y="37" width="10" height="2" className="fill-gray-700" />
+                          {/* Dashboard */}
+                          <rect x="85" y="25" width="12" height="35" rx="2" className="stroke-gray-700" />
+                          <path d="M87 30 L95 35 L87 40" className="stroke-gray-700 fill-none" />
+                          <rect x="88" y="45" width="2" height="8" className="fill-gray-700" />
+                          <rect x="91" y="47" width="2" height="6" className="fill-gray-700" />
+                          <rect x="94" y="49" width="2" height="4" className="fill-gray-700" />
+                          {/* Antenna */}
+                          <circle cx="50" cy="18" r="2" className="fill-gray-700" />
+                          <line x1="50" y1="20" x2="50" y2="15" className="stroke-gray-700" />
+                        </svg>
+                      </div>
+                    </div>
+                    
+                    {/* Mock Metrics */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg">
+                        <div className="text-blue-700 text-sm font-medium">Response Time</div>
+                        <div className="text-2xl font-bold text-blue-900">127ms</div>
+                        <div className="text-blue-600 text-xs">↓ 23% from yesterday</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-lg">
+                        <div className="text-green-700 text-sm font-medium">Cost Savings</div>
+                        <div className="text-2xl font-bold text-green-900">42%</div>
+                        <div className="text-green-600 text-xs">↑ $1,247 saved</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-lg">
+                        <div className="text-purple-700 text-sm font-medium">Quality Score</div>
+                        <div className="text-2xl font-bold text-purple-900">9.2/10</div>
+                        <div className="text-purple-600 text-xs">↑ 0.3 improvement</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-4 rounded-lg">
+                        <div className="text-orange-700 text-sm font-medium">Requests</div>
+                        <div className="text-2xl font-bold text-orange-900">12.5k</div>
+                        <div className="text-orange-600 text-xs">Today</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Floating Elements */}
+                <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg border border-gray-200">
+                  <BarChart2 className="w-6 h-6 text-gray-700" />
+                </div>
+                <div className="absolute -bottom-4 -left-4 bg-white rounded-full p-3 shadow-lg border border-gray-200">
+                  <Shield className="w-6 h-6 text-gray-700" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Quick Start Code Example */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Get started in seconds
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Add just a few lines of code to start monitoring your LLM applications
+              </p>
+            </div>
+            
+            <div className="bg-gray-900 rounded-xl p-6 overflow-x-auto">
+              <div className="text-sm text-gray-400 mb-4">Installation & Setup</div>
+              <pre className="text-green-400 text-sm">
+{`# Install SentinelOps
+pip install sentinelops
+
+# Monitor your OpenAI calls
+from sentinelops import OpenAIMonitor
+
+monitor = OpenAIMonitor(
+    model="gpt-4",
+    application_name="my-app"
+)
+
+response = monitor.chat_completion(
+    messages=[{"role": "user", "content": "Hello!"}]
+)
+
+# That's it! 🚀 Your LLM is now monitored`}
+              </pre>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Grid */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-slate-800 mb-4">Comprehensive LLM Monitoring</h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                From performance metrics to hallucination detection, SentinelOps provides end-to-end observability for your AI systems.
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Everything you need for LLM observability
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                From performance metrics to cost optimization, SentinelOps provides comprehensive monitoring for your AI systems
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Feature 1 */}
-              <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-xl border border-pink-200 hover:shadow-lg transition-all duration-200 group">
-                <div className="p-3 rounded-lg inline-block mb-4 bg-pink-200 group-hover:bg-pink-300 transition-colors">
-                  <Zap className="w-6 h-6 text-pink-700" />
+              {/* Performance Monitoring */}
+              <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+                <div className="p-3 rounded-lg inline-block mb-4 bg-blue-100 group-hover:bg-blue-200 transition-colors">
+                  <Zap className="w-6 h-6 text-blue-700" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-slate-800">Performance Metrics</h3>
-                <p className="text-slate-600 mb-4">
-                  Track inference time, memory usage, request latency, and throughput with real-time dashboards.
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Performance Metrics</h3>
+                <p className="text-gray-600 mb-4">
+                  Track response times, throughput, token usage, and resource utilization in real-time.
                 </p>
-                <ul className="space-y-2 text-slate-600">
+                <ul className="space-y-2 text-gray-600 text-sm">
                   <li className="flex items-center">
-                    <div className="bg-pink-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-pink-600 rounded-full"></div>
-                    </div>
-                    Inference time tracking
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    End-to-end latency tracking
                   </li>
                   <li className="flex items-center">
-                    <div className="bg-pink-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-pink-600 rounded-full"></div>
-                    </div>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Resource utilization monitoring
                   </li>
                   <li className="flex items-center">
-                    <div className="bg-pink-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-pink-600 rounded-full"></div>
-                    </div>
-                    End-to-end latency measurement
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Percentile-based analysis
                   </li>
                 </ul>
               </div>
               
-              {/* Feature 2 */}
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-200 group">
-                <div className="p-3 rounded-lg inline-block mb-4 bg-blue-200 group-hover:bg-blue-300 transition-colors">
-                  <Activity className="w-6 h-6 text-blue-700" />
+              {/* Quality Assurance */}
+              <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+                <div className="p-3 rounded-lg inline-block mb-4 bg-purple-100 group-hover:bg-purple-200 transition-colors">
+                  <Shield className="w-6 h-6 text-purple-700" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-slate-800">Quality Assurance</h3>
-                <p className="text-slate-600 mb-4">
-                  Automatically detect hallucinations, inconsistencies, and model drift for more reliable AI.
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Quality Assurance</h3>
+                <p className="text-gray-600 mb-4">
+                  Automatically detect hallucinations, inconsistencies, and quality issues in LLM outputs.
                 </p>
-                <ul className="space-y-2 text-slate-600">
+                <ul className="space-y-2 text-gray-600 text-sm">
                   <li className="flex items-center">
-                    <div className="bg-blue-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Hallucination detection
                   </li>
                   <li className="flex items-center">
-                    <div className="bg-blue-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
-                    Response consistency monitoring
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Output consistency tracking
                   </li>
                   <li className="flex items-center">
-                    <div className="bg-blue-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
-                    Model drift indicators
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Quality scoring system
                   </li>
                 </ul>
               </div>
               
-              {/* Feature 3 */}
-              <div className="bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-xl border border-teal-200 hover:shadow-lg transition-all duration-200 group">
-                <div className="p-3 rounded-lg inline-block mb-4 bg-teal-200 group-hover:bg-teal-300 transition-colors">
-                  <PieChart className="w-6 h-6 text-teal-700" />
+              {/* Cost Optimization */}
+              <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+                <div className="p-3 rounded-lg inline-block mb-4 bg-green-100 group-hover:bg-green-200 transition-colors">
+                  <PieChart className="w-6 h-6 text-green-700" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-slate-800">Usage Analytics</h3>
-                <p className="text-slate-600 mb-4">
-                  Track token usage, request volumes, and get actionable insights to optimize your LLM applications.
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Cost Optimization</h3>
+                <p className="text-gray-600 mb-4">
+                  Track API costs, analyze token usage, and get recommendations to reduce expenses.
                 </p>
-                <ul className="space-y-2 text-slate-600">
+                <ul className="space-y-2 text-gray-600 text-sm">
                   <li className="flex items-center">
-                    <div className="bg-teal-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
-                    </div>
-                    Token usage tracking
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Real-time cost tracking
                   </li>
                   <li className="flex items-center">
-                    <div className="bg-teal-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
-                    </div>
-                    Application-level attribution
-                  </li>
-                  <li className="flex items-center">
-                    <div className="bg-teal-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
-                    </div>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Optimization recommendations
                   </li>
-                </ul>
-              </div>
-              
-              {/* Feature 4 */}
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl border border-purple-200 hover:shadow-lg transition-all duration-200 group">
-                <div className="p-3 rounded-lg inline-block mb-4 bg-purple-200 group-hover:bg-purple-300 transition-colors">
-                  <Shield className="w-6 h-6 text-purple-700" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-slate-800">Anomaly Detection</h3>
-                <p className="text-slate-600 mb-4">
-                  Get alerts for unusual behavior, errors, and potential issues before they impact users.
-                </p>
-                <ul className="space-y-2 text-slate-600">
                   <li className="flex items-center">
-                    <div className="bg-purple-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-                    </div>
-                    Real-time anomaly detection
-                  </li>
-                  <li className="flex items-center">
-                    <div className="bg-purple-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-                    </div>
-                    Error pattern recognition
-                  </li>
-                  <li className="flex items-center">
-                    <div className="bg-purple-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-                    </div>
-                    Customizable alerting rules
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Budget alerts & controls
                   </li>
                 </ul>
               </div>
               
-              {/* Feature 5 */}
-              <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-8 rounded-xl border border-indigo-200 hover:shadow-lg transition-all duration-200 group">
-                <div className="p-3 rounded-lg inline-block mb-4 bg-indigo-200 group-hover:bg-indigo-300 transition-colors">
-                  <BarChart2 className="w-6 h-6 text-indigo-700" />
+              {/* Interactive Dashboards */}
+              <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+                <div className="p-3 rounded-lg inline-block mb-4 bg-orange-100 group-hover:bg-orange-200 transition-colors">
+                  <BarChart2 className="w-6 h-6 text-orange-700" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-slate-800">Interactive Dashboards</h3>
-                <p className="text-slate-600 mb-4">
-                  Beautiful dashboards with real-time updates, historical trends, and deep insights.
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Interactive Dashboards</h3>
+                <p className="text-gray-600 mb-4">
+                  Visualize your data with beautiful, customizable dashboards and real-time updates.
                 </p>
-                <ul className="space-y-2 text-slate-600">
+                <ul className="space-y-2 text-gray-600 text-sm">
                   <li className="flex items-center">
-                    <div className="bg-indigo-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-indigo-600 rounded-full"></div>
-                    </div>
-                    Real-time monitoring
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Real-time visualization
                   </li>
                   <li className="flex items-center">
-                    <div className="bg-indigo-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-indigo-600 rounded-full"></div>
-                    </div>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Custom dashboard builder
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Historical trend analysis
                   </li>
+                </ul>
+              </div>
+              
+              {/* Anomaly Detection */}
+              <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+                <div className="p-3 rounded-lg inline-block mb-4 bg-red-100 group-hover:bg-red-200 transition-colors">
+                  <Activity className="w-6 h-6 text-red-700" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Anomaly Detection</h3>
+                <p className="text-gray-600 mb-4">
+                  Get alerted to unusual patterns and potential issues before they impact users.
+                </p>
+                <ul className="space-y-2 text-gray-600 text-sm">
                   <li className="flex items-center">
-                    <div className="bg-indigo-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-indigo-600 rounded-full"></div>
-                    </div>
-                    Request/response explorer
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    ML-based detection
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Smart alerting
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Multi-channel notifications
                   </li>
                 </ul>
               </div>
               
-              {/* Feature 6 */}
-              <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 p-8 rounded-xl border border-emerald-200 hover:shadow-lg transition-all duration-200 group">
-                <div className="p-3 rounded-lg inline-block mb-4 bg-emerald-200 group-hover:bg-emerald-300 transition-colors">
-                  <Code className="w-6 h-6 text-emerald-700" />
+              {/* Easy Integration */}
+              <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-200 group">
+                <div className="p-3 rounded-lg inline-block mb-4 bg-indigo-100 group-hover:bg-indigo-200 transition-colors">
+                  <Code className="w-6 h-6 text-indigo-700" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-slate-800">Easy Integration</h3>
-                <p className="text-slate-600 mb-4">
-                  Simple SDK for Python with support for all major LLM providers and frameworks.
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Easy Integration</h3>
+                <p className="text-gray-600 mb-4">
+                  Simple SDK integration with all major LLM providers and AI frameworks.
                 </p>
-                <ul className="space-y-2 text-slate-600">
+                <ul className="space-y-2 text-gray-600 text-sm">
                   <li className="flex items-center">
-                    <div className="bg-emerald-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
-                    </div>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Multi-provider support
                   </li>
                   <li className="flex items-center">
-                    <div className="bg-emerald-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
-                    </div>
-                    Framework integration
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Framework integrations
                   </li>
                   <li className="flex items-center">
-                    <div className="bg-emerald-300 p-1 rounded-full mr-2">
-                      <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
-                    </div>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     Minimal performance impact
                   </li>
                 </ul>
@@ -267,69 +361,91 @@ const Homepage = () => {
           </div>
         </section>
 
-        {/* Rest of the sections with similar color updates... */}
-        
-        {/* Open Source Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-700 to-slate-800 text-white">
+        {/* Supported Providers */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div className="md:flex md:items-center md:justify-between">
-              <div className="md:w-1/2 mb-8 md:mb-0">
-                <h2 className="text-3xl font-bold mb-4">Free & Open Source</h2>
-                <p className="text-lg mb-6 text-slate-200">
-                  SentinelOps is 100% open source and free to use. We believe in transparency and community-driven development.
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Works with all major LLM providers
+              </h2>
+              <p className="text-xl text-gray-600">
+                Monitor your entire AI stack, regardless of which providers you use
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+              {['OpenAI', 'Anthropic', 'HuggingFace', 'AWS Bedrock', 'Google Vertex', 'Cohere'].map((provider) => (
+                <div key={provider} className="bg-gray-50 rounded-lg p-4 text-center hover:bg-gray-100 transition-colors">
+                  <div className="text-sm font-medium text-gray-700">{provider}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Open Source Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-black text-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+              <div className="mb-8 lg:mb-0">
+                <h2 className="text-3xl font-bold mb-4">100% Open Source</h2>
+                <p className="text-lg mb-6 text-gray-300">
+                  SentinelOps is completely free and open source under the MIT license. Deploy it anywhere, modify it as needed, and contribute to the community.
                 </p>
-                <ul className="space-y-3 text-slate-200 mb-8">
+                <ul className="space-y-3 text-gray-300 mb-8">
                   <li className="flex items-start">
-                    <div className="rounded-full bg-pink-500 p-1 mr-3 mt-1">
-                      <div className="w-4 h-4 text-white flex items-center justify-center">✓</div>
-                    </div>
-                    <span>MIT licensed - use in any project</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5" />
+                    <span>Free to use in commercial environments</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="rounded-full bg-pink-500 p-1 mr-3 mt-1">
-                      <div className="w-4 h-4 text-white flex items-center justify-center">✓</div>
-                    </div>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5" />
+                    <span>Self-hosted deployment options</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5" />
                     <span>Active community of contributors</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="rounded-full bg-pink-500 p-1 mr-3 mt-1">
-                      <div className="w-4 h-4 text-white flex items-center justify-center">✓</div>
-                    </div>
-                    <span>Regular updates and new features</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5" />
+                    <span>No vendor lock-in</span>
                   </li>
                 </ul>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                  <a href="https://github.com/sentinelops/sentinelops" className="bg-white text-slate-800 hover:bg-slate-100 font-medium rounded-lg px-6 py-3 text-center flex items-center justify-center transition-all duration-200">
-                    Star on GitHub
-                    <span className="ml-2">⭐</span>
+                  <a 
+                    href="https://github.com/sentinelops/sentinelops" 
+                    className="inline-flex items-center justify-center bg-white text-gray-900 hover:bg-gray-100 font-medium rounded-lg px-6 py-3 text-center transition-all duration-200"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="mr-2 w-5 h-5" />
+                    View on GitHub
                   </a>
-                  <a href="/docs/contributing" className="bg-pink-500 text-white hover:bg-pink-600 font-medium rounded-lg px-6 py-3 text-center transition-all duration-200">
+                  <a 
+                    href="/docs/contributing" 
+                    className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-medium rounded-lg px-6 py-3 text-center transition-all duration-200"
+                  >
                     Contribute
                   </a>
                 </div>
               </div>
-              <div className="md:w-1/2 flex justify-center">
-                <div className="bg-slate-800 p-6 rounded-xl border border-slate-600 max-w-md">
+              
+              <div className="relative">
+                <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
                   <div className="flex items-center mb-4">
-                    <svg className="h-8 w-8 text-white mr-3" fill="currentColor" viewBox="0 0 24 24">
-                      <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-xl font-semibold">Join Our Community</span>
+                    <Terminal className="w-6 h-6 text-gray-400 mr-3" />
+                    <span className="text-gray-300 font-medium">Quick Deploy</span>
                   </div>
-                  <p className="text-slate-200 mb-4">
-                    Help shape the future of LLM observability by contributing to SentinelOps.
-                  </p>
-                  <div className="bg-slate-700 rounded-lg p-4 mb-4">
-                    <code className="text-sm text-slate-200">
-                      git clone https://github.com/sentinelops/sentinelops.git<br />
-                      cd sentinelops<br />
-                      pip install -e .
-                    </code>
+                  <pre className="text-gray-300 text-sm">
+{`# Clone and deploy with Docker Compose
+git clone https://github.com/sentinelops/sentinelops.git
+cd sentinelops
+./infrastructure/scripts/quick-deploy.sh
+
+# Access at http://localhost:3000`}
+                  </pre>
+                  <div className="mt-4 text-xs text-gray-400">
+                    ⚡ Deploys in under 2 minutes
                   </div>
-                  <a href="/docs/contributing" className="text-slate-200 hover:text-white text-sm flex items-center">
-                    Learn more about contributing
-                    <ArrowRight className="ml-1 h-3 w-3" />
-                  </a>
                 </div>
               </div>
             </div>
@@ -337,19 +453,32 @@ const Homepage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 to-blue-50 border-t border-pink-100">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-slate-800">Ready to gain full visibility into your AI systems?</h2>
-            <p className="text-xl mb-8 text-slate-600 max-w-3xl mx-auto">
-              Start monitoring your LLMs in minutes with our easy-to-use SDK and powerful dashboards.
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 to-blue-50">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">
+              Ready to gain complete visibility into your AI systems?
+            </h2>
+            <p className="text-xl mb-8 text-gray-600 max-w-3xl mx-auto">
+              Start monitoring your LLM applications in minutes. Deploy for free and start optimizing your AI systems today.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <a href="/docs/quick-start" className="bg-gradient-to-r from-pink-500 to-pink-600 text-white hover:from-pink-600 hover:to-pink-700 font-medium rounded-lg px-8 py-3 text-center transition-all duration-200 shadow-md hover:shadow-lg">
-                Get Started
+              <a 
+                href="/docs/quick-start" 
+                className="inline-flex items-center justify-center bg-gradient-to-r from-pink-500 to-pink-600 text-white hover:from-pink-600 hover:to-pink-700 font-medium rounded-lg px-8 py-3 text-center transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                <Play className="mr-2 w-5 h-5" />
+                Get Started Free
               </a>
-              <a href="https://github.com/sentinelops/sentinelops" className="bg-white border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 font-medium rounded-lg px-8 py-3 text-center transition-all duration-200">
-                GitHub
+              <a 
+                href="/docs/examples" 
+                className="inline-flex items-center justify-center bg-white border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 font-medium rounded-lg px-8 py-3 text-center transition-all duration-200"
+              >
+                <Eye className="mr-2 w-5 h-5" />
+                View Examples
               </a>
+            </div>
+            <div className="mt-6 text-sm text-gray-500">
+              No signup required • Deploy in 2 minutes • 100% open source
             </div>
           </div>
         </section>
