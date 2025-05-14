@@ -1,7 +1,7 @@
 // components/Footer.js
 import React from 'react';
 import Link from 'next/link';
-import { GitHub, Twitter, Slack, Mail } from 'lucide-react';
+// Icons removed to fix import issues
 
 const Footer = () => {
   return (
@@ -27,7 +27,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <GitHub className="h-5 w-5" />
+                GitHub
               </a>
               <a
                 href="https://twitter.com/SentinelOpsAI"
@@ -35,7 +35,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Twitter className="h-5 w-5" />
+                Twitter
               </a>
               <a
                 href="https://discord.gg/sentinelops"
@@ -43,13 +43,13 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Slack className="h-5 w-5" />
+                Discord
               </a>
               <a
                 href="mailto:info@sentinelops.com"
                 className="text-gray-400 hover:text-white"
               >
-                <Mail className="h-5 w-5" />
+                Email
               </a>
             </div>
           </div>

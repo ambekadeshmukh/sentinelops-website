@@ -260,6 +260,7 @@ response = monitor.chat_completion(
 
 print(response.choices[0].message.content)`}</pre>
                   </div>
+                </div>
                 
                 <p>
                   The <code>monitor.chat_completion()</code> method is a drop-in replacement for OpenAI's <code>openai.ChatCompletion.create()</code> that automatically tracks important metrics.
@@ -334,7 +335,7 @@ print(response["content"][0]["text"])`, 5)}
                     </button>
                   </div>
                   <div className="p-4 overflow-x-auto">
-                    <pre className="text-gray-100">from sentinelops import AnthropicMonitor
+                    <pre className="text-gray-100">{`from sentinelops import AnthropicMonitor
 
 # Initialize the monitor
 monitor = AnthropicMonitor(
@@ -353,10 +354,40 @@ response = monitor.messages(
     ]
 )
 
-print(response["content"][0]["text"])</pre>
+print(response["content"][0]["text"])`}</pre>
                   </div>
                 </div>
+                
+                <h2>Next Steps</h2>
+                
+                <p>
+                  Now that you have SentinelOps up and running, explore more features and integrations:
+                </p>
+                
+                <div className="not-prose grid md:grid-cols-2 gap-4 mt-6">
+                  <a href="/docs/performance-monitoring" className="group border border-gray-200 rounded-lg p-4 hover:border-black hover:shadow-md transition-all">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-black text-white">
+                          <Eye className="h-5 w-5" />
+                        </div>
+                      </div>
                       <div className="ml-3">
+                        <h3 className="text-sm font-medium text-black group-hover:text-black">Performance Monitoring</h3>
+                        <p className="mt-1 text-sm text-gray-600">
+                          Learn how to monitor inference times, memory usage, and more.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  
+                  <a href="/docs/integrations" className="group border border-gray-200 rounded-lg p-4 hover:border-black hover:shadow-md transition-all">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-black text-white">
+                          <Code className="h-5 w-5" />
+                        </div>
+                      </div>
                       <div className="ml-3">
                         <h3 className="text-sm font-medium text-black group-hover:text-black">Integrations</h3>
                         <p className="mt-1 text-sm text-gray-600">
