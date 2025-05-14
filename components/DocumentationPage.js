@@ -240,7 +240,7 @@ print(response.choices[0].message.content)`, 3)}
                     </button>
                   </div>
                   <div className="p-4 overflow-x-auto">
-                    <pre className="text-gray-100">import os
+                    <pre className="text-gray-100">{`import os
 from sentinelops import OpenAIMonitor
 
 # Initialize the monitor
@@ -258,9 +258,8 @@ response = monitor.chat_completion(
     ]
 )
 
-print(response.choices[0].message.content)</pre>
+print(response.choices[0].message.content)`}</pre>
                   </div>
-                </div>
                 
                 <p>
                   The <code>monitor.chat_completion()</code> method is a drop-in replacement for OpenAI's <code>openai.ChatCompletion.create()</code> that automatically tracks important metrics.
