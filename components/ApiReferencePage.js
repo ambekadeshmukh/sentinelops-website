@@ -449,7 +449,7 @@ const ApiReferencePage = () => {
                   </div>
                 </div>
                 
-                <h3>GET /requests/{request_id}</h3>
+                <h3>GET /requests/&#123;request_id&#125;</h3>
                 
                 <p>
                   Get detailed information for a specific request.
@@ -497,7 +497,7 @@ const ApiReferencePage = () => {
                   </div>
                 </div>
                 
-                <h3>POST /anomalies/{anomaly_id}/resolve</h3>
+                <h3>POST /anomalies/&#123;anomaly_id&#125;/resolve</h3>
                 
                 <p>
                   Mark an anomaly as resolved.

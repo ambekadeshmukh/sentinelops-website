@@ -21,32 +21,7 @@ const Header = () => {
                 <div className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
                   {/* Robot Logo */}
                   <div className="w-10 h-10 bg-white rounded-lg border-2 border-gray-200 flex items-center justify-center">
-                    <svg 
-                      viewBox="0 0 100 100" 
-                      className="w-8 h-8"
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2"
-                    >
-                      {/* Robot Body */}
-                      <rect x="20" y="40" width="60" height="40" rx="4" className="stroke-gray-700" />
-                      {/* Robot Head */}
-                      <rect x="25" y="20" width="50" height="25" rx="4" className="stroke-gray-700" />
-                      {/* Eyes */}
-                      <circle cx="35" cy="30" r="3" className="fill-gray-700" />
-                      <circle cx="65" cy="30" r="3" className="fill-gray-700" />
-                      {/* Mouth */}
-                      <rect x="45" y="37" width="10" height="2" className="fill-gray-700" />
-                      {/* Dashboard */}
-                      <rect x="85" y="25" width="12" height="35" rx="2" className="stroke-gray-700" />
-                      <path d="M87 30 L95 35 L87 40" className="stroke-gray-700 fill-none" />
-                      <rect x="88" y="45" width="2" height="8" className="fill-gray-700" />
-                      <rect x="91" y="47" width="2" height="6" className="fill-gray-700" />
-                      <rect x="94" y="49" width="2" height="4" className="fill-gray-700" />
-                      {/* Antenna */}
-                      <circle cx="50" cy="18" r="2" className="fill-gray-700" />
-                      <line x1="50" y1="20" x2="50" y2="15" className="stroke-gray-700" />
-                    </svg>
+                    <img src="/images/robot-logo.png" alt="SentinelOps Logo" className="w-8 h-8" />
                   </div>
                   <span className="text-xl font-bold text-gray-900">SentinelOps</span>
                 </div>
@@ -59,16 +34,18 @@ const Header = () => {
                 Features
               </Link>
               
+              <Link href="/docs/examples" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors">
+                Use Cases
+              </Link>
+              
               {/* Documentation Dropdown */}
               <div className="relative">
-                <button 
-                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
+                <Link href="/docs/quick-start" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
                   onMouseEnter={() => setDocsDropdownOpen(true)}
-                  onMouseLeave={() => setDocsDropdownOpen(false)}
                 >
                   Documentation
                   <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
+                </Link>
                 {docsDropdownOpen && (
                   <div 
                     className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50"
@@ -88,16 +65,13 @@ const Header = () => {
                       <Link href="/docs/api-reference" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">
                         API Reference
                       </Link>
-                      <Link href="/docs/examples" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors">
-                        Examples
-                      </Link>
                     </div>
                   </div>
                 )}
               </div>
 
               <a 
-                href="https://github.com/sentinelops/sentinelops" 
+                href="https://github.com/ambekadeshmukh/sentinelops" 
                 className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"

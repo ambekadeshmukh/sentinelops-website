@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from './Layout';
+import SupportedProviders from './SupportedProviders';
 import { 
   BarChart2, 
   Shield, 
@@ -42,6 +43,9 @@ const FeaturesPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Integration Section - One-Minute Integration */}
+      <SupportedProviders />
 
       {/* Core Features Grid */}
       <section id="core-features" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">

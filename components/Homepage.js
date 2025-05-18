@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from './Layout';
+import IntegrationSection from './IntegrationSection';
 import { ArrowRight, BarChart2, Shield, Zap, Code, Activity, Eye, Terminal, PieChart, CheckCircle, ExternalLink, Github, Star, Play } from 'lucide-react';
 
 const Homepage = () => {
@@ -12,11 +13,8 @@ const Homepage = () => {
             <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
               <div className="mb-10 lg:mb-0">
                 <div className="flex items-center space-x-2 mb-6">
-                  <span className="bg-pink-100 text-pink-800 text-sm font-medium px-3 py-1 rounded-full">
+                  <span className="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">
                     🔥 100% Open Source
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                    MIT License
                   </span>
                 </div>
                 
@@ -69,10 +67,6 @@ const Homepage = () => {
                 </div>
                 
                 <div className="flex items-center space-x-6 mt-8 text-sm text-gray-500">
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 mr-1 text-yellow-500" />
-                    <span>2.3k+ stars</span>
-                  </div>
                   <div>No credit card required</div>
                   <div>Deploy in minutes</div>
                 </div>
@@ -92,32 +86,7 @@ const Homepage = () => {
                     {/* Logo in center */}
                     <div className="flex justify-center mb-6">
                       <div className="w-20 h-20 bg-gray-50 rounded-2xl border-2 border-gray-200 flex items-center justify-center">
-                        <svg 
-                          viewBox="0 0 100 100" 
-                          className="w-16 h-16"
-                          fill="none" 
-                          stroke="currentColor" 
-                          strokeWidth="2"
-                        >
-                          {/* Robot Body */}
-                          <rect x="20" y="40" width="60" height="40" rx="4" className="stroke-gray-700" />
-                          {/* Robot Head */}
-                          <rect x="25" y="20" width="50" height="25" rx="4" className="stroke-gray-700" />
-                          {/* Eyes */}
-                          <circle cx="35" cy="30" r="3" className="fill-gray-700" />
-                          <circle cx="65" cy="30" r="3" className="fill-gray-700" />
-                          {/* Mouth */}
-                          <rect x="45" y="37" width="10" height="2" className="fill-gray-700" />
-                          {/* Dashboard */}
-                          <rect x="85" y="25" width="12" height="35" rx="2" className="stroke-gray-700" />
-                          <path d="M87 30 L95 35 L87 40" className="stroke-gray-700 fill-none" />
-                          <rect x="88" y="45" width="2" height="8" className="fill-gray-700" />
-                          <rect x="91" y="47" width="2" height="6" className="fill-gray-700" />
-                          <rect x="94" y="49" width="2" height="4" className="fill-gray-700" />
-                          {/* Antenna */}
-                          <circle cx="50" cy="18" r="2" className="fill-gray-700" />
-                          <line x1="50" y1="20" x2="50" y2="15" className="stroke-gray-700" />
-                        </svg>
+                        <img src="/images/robot-logo.png" alt="SentinelOps Logo" className="w-16 h-16" />
                       </div>
                     </div>
                     
@@ -159,42 +128,9 @@ const Homepage = () => {
           </div>
         </section>
 
-        {/* Quick Start Code Example */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Get started in seconds
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Add just a few lines of code to start monitoring your LLM applications
-              </p>
-            </div>
-            
-            <div className="bg-gray-900 rounded-xl p-6 overflow-x-auto">
-              <div className="text-sm text-gray-400 mb-4">Installation & Setup</div>
-              <pre className="text-green-400 text-sm">
-{`# Install SentinelOps
-pip install sentinelops
-
-# Monitor your OpenAI calls
-from sentinelops import OpenAIMonitor
-
-monitor = OpenAIMonitor(
-    model="gpt-4",
-    application_name="my-app"
-)
-
-response = monitor.chat_completion(
-    messages=[{"role": "user", "content": "Hello!"}]
-)
-
-# That's it! 🚀 Your LLM is now monitored`}
-              </pre>
-            </div>
-          </div>
-        </section>
-
+        {/* Integration Section - One-Minute Integration */}
+        <IntegrationSection />
+        
         {/* Features Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -361,28 +297,6 @@ response = monitor.chat_completion(
           </div>
         </section>
 
-        {/* Supported Providers */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Works with all major LLM providers
-              </h2>
-              <p className="text-xl text-gray-600">
-                Monitor your entire AI stack, regardless of which providers you use
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-              {['OpenAI', 'Anthropic', 'HuggingFace', 'AWS Bedrock', 'Google Vertex', 'Cohere'].map((provider) => (
-                <div key={provider} className="bg-gray-50 rounded-lg p-4 text-center hover:bg-gray-100 transition-colors">
-                  <div className="text-sm font-medium text-gray-700">{provider}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Open Source Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-black text-white">
           <div className="max-w-7xl mx-auto">
@@ -390,7 +304,7 @@ response = monitor.chat_completion(
               <div className="mb-8 lg:mb-0">
                 <h2 className="text-3xl font-bold mb-4">100% Open Source</h2>
                 <p className="text-lg mb-6 text-gray-300">
-                  SentinelOps is completely free and open source under the MIT license. Deploy it anywhere, modify it as needed, and contribute to the community.
+                  SentinelOps is completely free and open source. Deploy it anywhere, modify it as needed, and contribute to the community.
                 </p>
                 <ul className="space-y-3 text-gray-300 mb-8">
                   <li className="flex items-start">
@@ -403,16 +317,12 @@ response = monitor.chat_completion(
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5" />
-                    <span>Active community of contributors</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5" />
                     <span>No vendor lock-in</span>
                   </li>
                 </ul>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                   <a 
-                    href="https://github.com/sentinelops/sentinelops" 
+                    href="https://github.com/ambekadeshmukh/sentinelops" 
                     className="inline-flex items-center justify-center bg-white text-gray-900 hover:bg-gray-100 font-medium rounded-lg px-6 py-3 text-center transition-all duration-200"
                     target="_blank"
                     rel="noopener noreferrer"

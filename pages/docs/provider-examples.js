@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import QuickStartGuide from '../../components/QuickStartGuide';
+import LLMProviderExamples from '../../components/LLMProviderExamples';
 
-const QuickStartPage = () => {
+const ProviderExamplesPage = () => {
   return (
-    <Layout title="SentinelOps Documentation - Quick Start Guide">
+    <Layout title="SentinelOps - LLM Provider Integration Examples">
       <div className="bg-[#FDFDFD]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row">
@@ -15,7 +15,7 @@ const QuickStartPage = () => {
                   <h2 className="text-sm font-semibold text-black uppercase tracking-wider mb-3">Getting Started</h2>
                   <ul className="space-y-2">
                     <li>
-                      <a href="/docs/quick-start" className="flex items-center text-black font-medium">
+                      <a href="/docs/quick-start" className="flex items-center text-gray-600 hover:text-black">
                         <span className="h-4 w-4 mr-1">→</span>
                         Quick Start
                       </a>
@@ -27,9 +27,9 @@ const QuickStartPage = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="/docs/concepts" className="flex items-center text-gray-600 hover:text-black">
+                      <a href="/docs/provider-examples" className="flex items-center text-black font-medium">
                         <span className="h-4 w-4 mr-1">→</span>
-                        Core Concepts
+                        Provider Examples
                       </a>
                     </li>
                   </ul>
@@ -75,7 +75,13 @@ const QuickStartPage = () => {
 
             {/* Main Content */}
             <div className="lg:flex-1 lg:pl-8">
-              <QuickStartGuide />
+              <h1 className="text-3xl font-bold mb-6">LLM Provider Integration Examples</h1>
+              <p className="text-lg text-gray-700 mb-8">
+                SentinelOps provides consistent monitoring for all major LLM providers with a simple one-minute integration. 
+                Select any provider below to see how easily you can add comprehensive monitoring to your application.
+              </p>
+              
+              <LLMProviderExamples />
             </div>
           </div>
         </div>
@@ -84,4 +90,4 @@ const QuickStartPage = () => {
   );
 };
 
-export default QuickStartPage;
+export default ProviderExamplesPage;
