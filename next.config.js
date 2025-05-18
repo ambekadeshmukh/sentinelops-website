@@ -1,12 +1,11 @@
 // next.config.js
 module.exports = {
     reactStrictMode: true,
+    output: 'export',
+    trailingSlash: true,
     images: {
       domains: ['sentinelops.com'],
-    },
-    i18n: {
-      locales: ['en'],
-      defaultLocale: 'en',
+      unoptimized: true,
     },
     webpack(config) {
       config.module.rules.push({
